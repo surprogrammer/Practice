@@ -24,6 +24,7 @@ public class RepeatedString16june {
             StringBuilder stringBuilder = new StringBuilder( s );
             String infiniteString = "";
             if(stringBuilder.length() < n) {
+                //repeat String if length is less than n
                 infiniteString    = infiniteString(s, n);
             }
             int count = 0;
@@ -41,27 +42,13 @@ public class RepeatedString16june {
             return 0;
     }
 
-    static String infiniteString(StringBuilder stringBuilder, Long n){
-        try {
-            for(int i=0; i<=n; i++){
-                stringBuilder.append( stringBuilder);
-                System.out.println("Length:"+ stringBuilder.length());
-                //*if(stringBuilder.length() == n || stringBuilder.length() > 100)*//*
-                if(stringBuilder.length() == n)
-                    break;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return  stringBuilder.toString();
-    }
 
     static String infiniteString(String strInput, Long n){
         //StringWriter stringWriter = new StringWriter(  );
         StringBuilder stringBuilder = new StringBuilder(  );
             for(int i=0; i<=n; i++){
                 //stringWriter.write( strInput );
+                //stringBuilder.append( String.format(strInput));
                 stringBuilder.append( strInput);
                 System.out.println("Length:"+ String.valueOf( stringBuilder ).length());
                 /*if(stringBuilder.length() == n || stringBuilder.length() > 100)*/
